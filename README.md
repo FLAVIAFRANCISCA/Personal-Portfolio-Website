@@ -1,4 +1,4 @@
-# Flavia's Creative Space 🚀
+# Flavia's Creative Corner 🚀
 Welcome to Flavia’s Creative Space, your go-to spot to explore my journey through the world of design and technology. 🎨💻
 
 What’s Inside? 🕵️‍♀️
