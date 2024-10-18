@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavia Tsho-Tsho's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/YOUR_ACTUAL_KEY.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: black;
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .section-enter {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        
+        .section-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .section-exit {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        
+        .section-exit-active {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .project {
+            background-color: #2d3748;
+            /* Tailwind's gray-800 */
+            border-radius: 0.5rem;
+            /* Rounded */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .skill-logo {
+            width: 50px;
+            height: auto;
+            margin: 0.5rem;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .skill-logo:hover {
+            transform: scale(1.1);
+        }
+        
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 1rem;
+            transition: color 0.3s;
+        }
+        
+        .social-icon:hover {
+            color: #00bcd4;
+            /* Tailwind's cyan-500 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="bg-black text-cyan-500 py-8 text-center">
+        <h1 class="text-4xl font-bold mb-4">Hello There! I am Flavia Tsho-Tsho</h1>
+        <nav class="flex justify-center space-x-8">
+            <a href="#about" onclick="showSection('about')" class="hover:underline">About</a>
+            <a href="#skills" onclick="showSection('skills')" class="hover:underline">Skills</a>
+            <a href="#projects" onclick="showSection('projects')" class="hover:underline">Projects</a>
+            <a href="#contact" onclick="showSection('contact')" class="hover:underline">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-16 px-4">
+        <section id="about" class="about transition section-enter section-enter-active">
+            <h2 class="text-3xl font-bold mb-4">About Me</h2>
+            <p class="text-lg mb-6">A passionate developer, mentor, graphic designer, entrepreneur, and cyber security enthusiast, seamlessly blending my skills across technology, design, and business.</p>
+            <p class="text-lg mb-6">With a diverse background spanning development, design, entrepreneurship, and IT, I bring a multifaceted approach to technology and business. My journey began with a deep fascination for IT and what one can do with this skill, which has evolved
+                into a rewarding career path.</p>
+            <p class="text-lg mb-6">I am deeply interested in leveraging technology to create impactful solutions and staying at the forefront of advancements. My role as a mentor fuels my commitment to nurturing future tech leaders.</p>
+            <p class="text-lg mb-6">My goal is to merge my skills in development, design, and security to drive meaningful change and shape the future of technology. I am dedicated to pushing the boundaries of what's possible and contributing to the tech community's growth and
+                evolution.
+            </p>
+            <p class="text-lg mb-6">Check out my Blog: <a href="https://medium.com/@franciscakapenda/an-empowering-experience-at-the-geekulcha-annual-hackathon-2024-aecedcf90491" target="_blank" class="underline">My Medium Blog</a></p>
+            <p class="text-lg mb-6">Check out my Page: <a href="https://www.instagram.com/franciscaxgems?igsh=cGY5b3hzMXpobXZq" target="_blank" class="underline">My Instagram Business Page</a></p>
+        </section>
+
+        <section id="skills" class="skills transition section-enter section-enter-active">
+            <h2 class="text-3xl font-bold mb-8">My Skills</h2>
+            <div class="flex flex-wrap items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML" class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_logo_and_wordmark.svg" alt="Java" class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" class="skill-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_logo.svg" alt="C#" class="skill-logo">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="skill-logo">
+                <img src="https://git-scm.com/images/logos/git-logo.svg" alt="Git" class="skill-logo">
+                <img src="https://code.visualstudio.com/assets/docs/getstarted/keybindings/vscode-logo.png" alt="Visual Studio Code" class="skill-logo">
+                <img src="https://www.jetbrains.com/idea/branding/idea/logo.svg" alt="IntelliJ IDEA" class="skill-logo">
+                <img src="https://visualstudio.microsoft.com/wp-content/uploads/2021/04/vs_2019_logo.png" alt="Visual Studio" class="skill-logo">
+                <img src="https://www.figma.com/logo.svg" alt="Figma" class="skill-logo">
+                <img src="https://www.canva.com/favicon.ico" alt="Canva" class="skill-logo">
+            </div>
+        </section>
+
+        <section id="projects" class="projects transition section-enter section-enter-active">
+            <h2 class="text-3xl font-bold mb-8">Projects</h2>
+            <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project">
+                    <img src="https://via.placeholder.com/400x200" alt="Trivia Game">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Trivia Game</h3>
+                        <p class="text-lg mb-4">A fun and interactive trivia game.</p>
+                        <a href="#" target="_blank" class="text-cyan-500 hover:underline">View Project</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="https://via.placeholder.com/400x200" alt="Recipe Book">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Recipe Book</h3>
+                        <p class="text-lg mb-4">A web page showcasing recipes.</p>
+                        <a href="#" target="_blank" class="text-cyan-500 hover:underline">View Project</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="https://via.placeholder.com/400x200" alt="Advanced Calculator">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Advanced Calculator</h3>
+                        <p class="text-lg mb-4">An advanced calculator with extra features.</p>
+                        <a href="#" target="_blank" class="text-cyan-500 hover:underline">View Project</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="contact" class="contact transition section-enter section-enter-active">
+            <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
+            <div class="flex justify-center mb-8">
+                <a href="https://github.com/franciscakapenda" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/franciscakapenda" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/franciscaxgems" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://medium.com/@franciscakapenda" target="_blank" class="social-icon">
+                    <i class="fab fa-medium"></i>
+                </a>
+            </div>
+            <form class="max-w-md mx-auto" action="mailto:franciscakapenda@example.com" method="post" enctype="text/plain">
+                <div class="mb-4">
+                    <label for="name" class="block text-lg font-medium mb-2">Name</label>
+                    <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-cyan-500 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-lg font-medium mb-2">Email</label>
+                    <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-cyan-500 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-lg font-medium mb-2">Message</label>
+                    <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 border border-cyan-500 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"></textarea>
+                </div>
+                <button type="submit" class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded-md">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-black text-cyan-500 py-4 text-center">
+        <p>&copy; 2024 Flavia Tsho-Tsho. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.about, .skills, .projects, .contact');
+            sections.forEach(section => {
+                section.classList.remove('section-enter-active');
+                section.classList.add('section-exit');
+                section.addEventListener('animationend', () => {
+                    section.classList.remove('section-exit');
+                }, {
+                    once: true
+                });
+            });
+            const targetSection = document.getElementById(sectionId);
+            targetSection.classList.add('section-enter');
+            targetSection.addEventListener('animationend', () => {
+                targetSection.classList.remove('section-enter');
+            }, {
+                once: true
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('about');
+        });
+    </script>
+
+</body>
+
+</html>
